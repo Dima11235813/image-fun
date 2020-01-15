@@ -1,8 +1,8 @@
-#Fun With Images
+# Fun With Images
 
-##Similar Images
+## Similar Images
 
-##PixaBay
+## PixaBay
 [Pixabay API Docs](https://pixabay.com/api/docs/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

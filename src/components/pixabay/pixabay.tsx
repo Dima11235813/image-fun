@@ -1,5 +1,5 @@
 import React from "react";
-import "./SimilarImages.css";
+import "./Pixabay.css";
 import { PixabayRequestParams } from "../../models/pixabayRequestParams";
 
 const imageStyle = {

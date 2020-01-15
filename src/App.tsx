@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import SimilarImages from './components/similarImages/SimilarImages';
+import { AppRoutes } from './AppRoutes';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      AppRoutes()
+      {AppRoutes()}
     </div>
   );
 }

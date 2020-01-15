@@ -1,0 +1,6 @@
+#input-container{
+  height: 10vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}

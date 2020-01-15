@@ -1,0 +1,27 @@
+#images-source {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.image-source-item:hover {
+  cursor: pointer;
+}
+.image-caption{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding: .2rem;
+  /* background-color: grey; */
+}
+.link-for-image {
+  /* position: absolute;
+  top: 0px;
+  left: 20px;
+  color: white; */
+}
+.author-for-image {
+  /* top: 50px;
+  left: 20px;
+  color: white;
+  position: absolute; */
+}

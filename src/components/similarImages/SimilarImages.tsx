@@ -15,7 +15,22 @@ class SimilarImages extends React.Component {
     fetch(`https://picsum.photos/v2/list`)
       .then(data => data.json())
       .then(data => {
-        this.setState({ picData: data }, this.getRelatedImages);
+        let indexToStartAt = 20522147
+        let numberOfGithubPeepsToShow = 5000
+        let newArrayOfData = new Array(numberOfGithubPeepsToShow).fill({}).map((item, index) => {
+          let id = index + indexToStartAt
+          return {
+            id: `${id}`,
+            author: "Who is this guy",
+            width: 2500,
+            height: 1667,
+            url: `https://avatars0.githubusercontent.com/u/${id}?s=400&v=4`,
+            download_url: `https://avatars0.githubusercontent.com/u/${id}?s=400&v=4`
+          }
+        })
+        console.log(newArrayOfData)
+        // data.push(newArrayOfData)
+        this.setState({ picData: newArrayOfData }, this.getRelatedImages);
       })
       .catch(err => console.log(err));
   }
@@ -58,7 +73,7 @@ class SimilarImages extends React.Component {
               target="_blank"
               href={this.getRelatedImageUrl(item)}
             >
-              Similar Images
+              {`Similar Images ${item.id}`}
             </a>
             <span className="author-for-image">Author: {item.author}</span>
           </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import "./Pixabay.css";
 import { PixabayRequestParams } from "../../models/pixabayRequestParams";
 
 const imageStyle = {
@@ -23,8 +22,9 @@ class PixabayImages extends React.Component {
     fetch(`https://picsum.photos/v2/list`, pixabayRequestBody)
       .then(data => data.json())
       .then(data => {
-        this.setState({ picData: data });
+        // data.push()
         console.log(data);
+        this.setState({ picData: data });
       })
       .catch(err => console.log(err));
   }
@@ -60,7 +60,6 @@ class PixabayImages extends React.Component {
       <div className="App">
         <div id="input-container">
           <input value={this.state.input} onChange={this.handleInputChange}>
-            {" "}
           </input>
         </div>
         <div id="images-source">{imageSource}</div>
